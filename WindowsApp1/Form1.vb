@@ -27,5 +27,9 @@ Public Class Form1
         Dim frm As New Form7
         frm.Show()
     End Sub
+    Private Sub CreatePartNumber_Click(sender As Object, e As EventArgs) Handles CreatePartNumber.Click
+        Dim frm As New Form8
+        frm.Show()
+    End Sub
 
 End Class

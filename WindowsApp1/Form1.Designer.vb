@@ -27,7 +27,7 @@ Partial Class Form1
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UpdateStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreatePartNumber = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColumnsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -62,16 +62,16 @@ Partial Class Form1
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateStatusToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatePartNumber})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
-        Me.ToolsToolStripMenuItem.Text = "Tools"
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.ToolsToolStripMenuItem.Text = "Edit"
         '
-        'UpdateStatusToolStripMenuItem
+        'CreatePartNumber
         '
-        Me.UpdateStatusToolStripMenuItem.Name = "UpdateStatusToolStripMenuItem"
-        Me.UpdateStatusToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
-        Me.UpdateStatusToolStripMenuItem.Text = "Update Status"
+        Me.CreatePartNumber.Name = "CreatePartNumber"
+        Me.CreatePartNumber.Size = New System.Drawing.Size(180, 22)
+        Me.CreatePartNumber.Text = "Create Part Number"
         '
         'SettingsToolStripMenuItem
         '
@@ -83,7 +83,7 @@ Partial Class Form1
         'ColumnsToolStripMenuItem
         '
         Me.ColumnsToolStripMenuItem.Name = "ColumnsToolStripMenuItem"
-        Me.ColumnsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.ColumnsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ColumnsToolStripMenuItem.Text = "Columns"
         '
         'Button2
@@ -166,7 +166,7 @@ Partial Class Form1
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UpdateStatusToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CreatePartNumber As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ColumnsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button2 As Button
