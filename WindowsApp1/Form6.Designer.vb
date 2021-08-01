@@ -98,9 +98,9 @@ Partial Class Form6
         'Splitter5
         '
         Me.Splitter5.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Splitter5.Location = New System.Drawing.Point(573, 0)
+        Me.Splitter5.Location = New System.Drawing.Point(565, 0)
         Me.Splitter5.Name = "Splitter5"
-        Me.Splitter5.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter5.Size = New System.Drawing.Size(3, 600)
         Me.Splitter5.TabIndex = 9
         Me.Splitter5.TabStop = False
         '
@@ -108,7 +108,7 @@ Partial Class Form6
         '
         Me.Panel15.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel15.Location = New System.Drawing.Point(462, 0)
+        Me.Panel15.Location = New System.Drawing.Point(454, 0)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(111, 600)
         Me.Panel15.TabIndex = 8
@@ -116,9 +116,9 @@ Partial Class Form6
         'Splitter4
         '
         Me.Splitter4.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Splitter4.Location = New System.Drawing.Point(457, 0)
+        Me.Splitter4.Location = New System.Drawing.Point(451, 0)
         Me.Splitter4.Name = "Splitter4"
-        Me.Splitter4.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter4.Size = New System.Drawing.Size(3, 600)
         Me.Splitter4.TabIndex = 7
         Me.Splitter4.TabStop = False
         '
@@ -126,7 +126,7 @@ Partial Class Form6
         '
         Me.Panel14.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel14.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel14.Location = New System.Drawing.Point(329, 0)
+        Me.Panel14.Location = New System.Drawing.Point(323, 0)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(128, 600)
         Me.Panel14.TabIndex = 6
@@ -134,9 +134,9 @@ Partial Class Form6
         'Splitter3
         '
         Me.Splitter3.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Splitter3.Location = New System.Drawing.Point(324, 0)
+        Me.Splitter3.Location = New System.Drawing.Point(320, 0)
         Me.Splitter3.Name = "Splitter3"
-        Me.Splitter3.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter3.Size = New System.Drawing.Size(3, 600)
         Me.Splitter3.TabIndex = 5
         Me.Splitter3.TabStop = False
         '
@@ -144,7 +144,7 @@ Partial Class Form6
         '
         Me.Panel13.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel13.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel13.Location = New System.Drawing.Point(223, 0)
+        Me.Panel13.Location = New System.Drawing.Point(219, 0)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(101, 600)
         Me.Panel13.TabIndex = 4
@@ -152,9 +152,9 @@ Partial Class Form6
         'Splitter2
         '
         Me.Splitter2.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Splitter2.Location = New System.Drawing.Point(218, 0)
+        Me.Splitter2.Location = New System.Drawing.Point(216, 0)
         Me.Splitter2.Name = "Splitter2"
-        Me.Splitter2.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter2.Size = New System.Drawing.Size(3, 600)
         Me.Splitter2.TabIndex = 3
         Me.Splitter2.TabStop = False
         '
@@ -162,7 +162,7 @@ Partial Class Form6
         '
         Me.Panel12.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel12.Location = New System.Drawing.Point(115, 0)
+        Me.Panel12.Location = New System.Drawing.Point(113, 0)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(103, 600)
         Me.Panel12.TabIndex = 2
@@ -172,7 +172,7 @@ Partial Class Form6
         Me.Splitter1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Splitter1.Location = New System.Drawing.Point(110, 0)
         Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter1.Size = New System.Drawing.Size(3, 600)
         Me.Splitter1.TabIndex = 1
         Me.Splitter1.TabStop = False
         '

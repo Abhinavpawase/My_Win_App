@@ -2,6 +2,10 @@
 
 Public Class Form5
     Dim panel2_y As Double = 0
+    Dim uctl As UserControl1
+    Dim ctl8 As Control
+    Dim ctl12 As Control
+
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call load_form()
     End Sub
@@ -29,10 +33,10 @@ Public Class Form5
                 Select Case k
                     Case 0
                         btn.Size = New Size(Me.Panel11.Width - 8, 25)
-                        btn.Text = data_arr(i).Part + " -" & i
+                        btn.Text = data_arr(i).Part
                         Me.Panel11.Controls.Add(btn)
                         btn.Name = data_arr(i).Part + "!" + data_arr(i).Revision
-                        'AddHandler btn.MouseDown, AddressOf form2_Click
+                        AddHandler btn.MouseDown, AddressOf form2_Click
                     Case 1
                         btn.Size = New Size(Me.Panel12.Width - 8, 25)
                         btn.Text = data_arr(i).Revision
@@ -69,6 +73,20 @@ Public Class Form5
         Me.Panel17.Size = New Size(Me.Panel17.Width, cnt * 31)
         Me.Panel2.Size = New Size(Me.Panel2.Width, cnt * 31)
         Call add_handlers()
+    End Sub
+    Private Sub form2_Click(sender As Object, e As MouseEventArgs)
+        If e.Button = MouseButtons.Right Then
+            Me.Panel1.Controls.Remove(uctl)
+            ctl8 = DirectCast(sender, Button)
+            ctl12 = DirectCast(sender, Button).Parent
+            uctl = New UserControl1
+            uctl.Button1.Text = "In Part"
+            uctl.Size = New Size(uctl.Width, 30)
+            uctl.Location = New Point(ctl8.Location.X + 70, ctl8.Location.Y + 10)
+            Me.Panel1.Controls.Add(uctl)
+            uctl.BringToFront()
+            AddHandler uctl.Button1.Click, AddressOf in_part
+        End If
     End Sub
     Private Sub add_handlers()
         AddHandler Panel11.SizeChanged, AddressOf panel_size_changed
@@ -127,4 +145,30 @@ Public Class Form5
     Private Sub VScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles VScrollBar1.Scroll
         Me.Panel2.Location = New Point(Me.Panel2.Location.X, panel2_y - VScrollBar1.Value * 28)
     End Sub
+    Private Sub in_part()
+        Call remove_uctl()
+        Dim str As String = ctl8.Name
+        Dim frm As New Form4
+        frm.Label1.Text = "In Date"
+        frm.Label3.Visible = False
+        frm.TextBox3.Visible = False
+        frm.DateTimePicker2.Visible = False
+        frm.Button2.Location = New Point(57, 255 - 50)
+        frm.Button1.Location = New Point(188, 255 - 50)
+        frm.Size = New Size(frm.Width, frm.Height - 50)
+        frm.partno = str
+        frm.Show()
+    End Sub
+    Private Sub remove_uctl()
+        uctl.BackColor = Color.Transparent
+        uctl.Controls.Remove(uctl.Button1)
+        uctl.Controls.Remove(uctl.Button2)
+        uctl.Controls.Remove(uctl.Button3)
+        uctl.Controls.Remove(uctl.Button4)
+        uctl.SendToBack()
+        uctl.Hide()
+        Me.Panel1.Controls.Remove(uctl)
+    End Sub
+
+
 End Class

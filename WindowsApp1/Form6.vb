@@ -31,7 +31,7 @@ Public Class Form6
                 Select Case k
                     Case 0
                         btn.Size = New Size(Me.Panel11.Width - 8, 25)
-                        btn.Text = data_arr(i).Part + " -" & i
+                        btn.Text = data_arr(i).Part
                         Me.Panel11.Controls.Add(btn)
                         btn.Name = data_arr(i).Part + "!" + data_arr(i).Revision
                         'AddHandler btn.MouseDown, AddressOf form2_Click

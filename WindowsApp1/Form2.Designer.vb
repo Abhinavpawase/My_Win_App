@@ -61,14 +61,14 @@ Partial Class Form2
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(12, 72)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(525, 377)
+        Me.Panel1.Size = New System.Drawing.Size(535, 377)
         Me.Panel1.TabIndex = 0
         '
         'VScrollBar1
         '
         Me.VScrollBar1.Dock = System.Windows.Forms.DockStyle.Right
         Me.VScrollBar1.LargeChange = 5
-        Me.VScrollBar1.Location = New System.Drawing.Point(508, 0)
+        Me.VScrollBar1.Location = New System.Drawing.Point(518, 0)
         Me.VScrollBar1.Name = "VScrollBar1"
         Me.VScrollBar1.Size = New System.Drawing.Size(17, 377)
         Me.VScrollBar1.TabIndex = 2
@@ -92,9 +92,9 @@ Partial Class Form2
         'Splitter4
         '
         Me.Splitter4.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Splitter4.Location = New System.Drawing.Point(451, 0)
+        Me.Splitter4.Location = New System.Drawing.Point(445, 0)
         Me.Splitter4.Name = "Splitter4"
-        Me.Splitter4.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter4.Size = New System.Drawing.Size(3, 600)
         Me.Splitter4.TabIndex = 7
         Me.Splitter4.TabStop = False
         '
@@ -102,7 +102,7 @@ Partial Class Form2
         '
         Me.Panel14.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel14.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel14.Location = New System.Drawing.Point(329, 0)
+        Me.Panel14.Location = New System.Drawing.Point(323, 0)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(122, 600)
         Me.Panel14.TabIndex = 6
@@ -110,9 +110,9 @@ Partial Class Form2
         'Splitter3
         '
         Me.Splitter3.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Splitter3.Location = New System.Drawing.Point(324, 0)
+        Me.Splitter3.Location = New System.Drawing.Point(320, 0)
         Me.Splitter3.Name = "Splitter3"
-        Me.Splitter3.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter3.Size = New System.Drawing.Size(3, 600)
         Me.Splitter3.TabIndex = 5
         Me.Splitter3.TabStop = False
         '
@@ -120,7 +120,7 @@ Partial Class Form2
         '
         Me.Panel13.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel13.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel13.Location = New System.Drawing.Point(223, 0)
+        Me.Panel13.Location = New System.Drawing.Point(219, 0)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(101, 600)
         Me.Panel13.TabIndex = 4
@@ -128,9 +128,9 @@ Partial Class Form2
         'Splitter2
         '
         Me.Splitter2.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Splitter2.Location = New System.Drawing.Point(218, 0)
+        Me.Splitter2.Location = New System.Drawing.Point(216, 0)
         Me.Splitter2.Name = "Splitter2"
-        Me.Splitter2.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter2.Size = New System.Drawing.Size(3, 600)
         Me.Splitter2.TabIndex = 3
         Me.Splitter2.TabStop = False
         '
@@ -138,7 +138,7 @@ Partial Class Form2
         '
         Me.Panel12.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel12.Location = New System.Drawing.Point(115, 0)
+        Me.Panel12.Location = New System.Drawing.Point(113, 0)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(103, 600)
         Me.Panel12.TabIndex = 2
@@ -148,7 +148,7 @@ Partial Class Form2
         Me.Splitter1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Splitter1.Location = New System.Drawing.Point(110, 0)
         Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter1.Size = New System.Drawing.Size(3, 600)
         Me.Splitter1.TabIndex = 1
         Me.Splitter1.TabStop = False
         '
@@ -232,7 +232,7 @@ Partial Class Form2
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(549, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(559, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -279,7 +279,7 @@ Partial Class Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(549, 461)
+        Me.ClientSize = New System.Drawing.Size(559, 461)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)

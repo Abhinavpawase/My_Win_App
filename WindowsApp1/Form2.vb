@@ -3,7 +3,7 @@
 Public Class Form2
 
     Dim panel2_y As Double = 0
-    Dim uctl As UserControl1
+    Dim uctl As UserControl1 = Nothing
     Dim ctl8 As Control
     Dim ctl12 As Control
 
@@ -11,7 +11,6 @@ Public Class Form2
         Call load_form()
     End Sub
     Private Sub load_form()
-
         panel2_y = Me.Panel2.Location.Y
         Dim data_arr() As data1
         Dim cnt As Integer
@@ -35,7 +34,7 @@ Public Class Form2
                 Select Case k
                     Case 0
                         btn.Size = New Size(Me.Panel11.Width - 8, 25)
-                        btn.Text = data_arr(i).Part + " -" & i
+                        btn.Text = data_arr(i).Part
                         Me.Panel11.Controls.Add(btn)
                         btn.Name = data_arr(i).Part + "!" + data_arr(i).Revision
                         AddHandler btn.MouseDown, AddressOf form2_Click
@@ -59,8 +58,27 @@ Public Class Form2
         Me.Panel13.Size = New Size(Me.Panel13.Width, cnt * 31)
         Me.Panel14.Size = New Size(Me.Panel14.Width, cnt * 31)
         Me.Panel2.Size = New Size(Me.Panel2.Width, cnt * 31)
-
+        Call mouse_hover()
         Call add_handlers()
+    End Sub
+    Private Sub mouse_hover()
+        AddHandler Me.MouseHover, AddressOf Form2_MouseHover
+        Dim ctl As Control
+        For Each ctl In Me.Controls
+            AddHandler ctl.MouseHover, AddressOf Form2_MouseHover
+            Dim ctl2 As Control
+            For Each ctl2 In ctl.Controls
+                AddHandler ctl2.MouseHover, AddressOf Form2_MouseHover
+                Dim ctl3 As Control
+                For Each ctl3 In ctl2.Controls
+                    AddHandler ctl3.MouseHover, AddressOf Form2_MouseHover
+                    Dim ctl4 As Control
+                    For Each ctl4 In ctl3.Controls
+                        AddHandler ctl4.MouseHover, AddressOf Form2_MouseHover
+                    Next
+                Next
+            Next
+        Next
     End Sub
     Private Sub add_handlers()
         AddHandler Panel11.SizeChanged, AddressOf panel_size_changed
@@ -175,6 +193,12 @@ Public Class Form2
         uctl.SendToBack()
         uctl.Hide()
         Me.Panel1.Controls.Remove(uctl)
+        uctl = Nothing
+    End Sub
+    Private Sub Form2_MouseHover(sender As Object, e As EventArgs)
+        If Not uctl Is Nothing Then
+            Call remove_uctl()
+        End If
     End Sub
 
 End Class
