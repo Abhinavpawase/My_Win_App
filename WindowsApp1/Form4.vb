@@ -61,7 +61,6 @@ Public Class Form4
             req_part_data1.out_qty = dty.ToString
             cls.Out_part_data1 = req_part_data1
             Call cls.insert_data()
-            Me.Dispose()
             MsgBox("Part Out")
         End If
 

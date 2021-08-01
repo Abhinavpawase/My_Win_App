@@ -55,6 +55,9 @@ Partial Class Form5
         Me.UpdateStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColumnsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.Splitter8 = New System.Windows.Forms.Splitter()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -71,14 +74,14 @@ Partial Class Form5
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(12, 72)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(880, 377)
+        Me.Panel1.Size = New System.Drawing.Size(1037, 377)
         Me.Panel1.TabIndex = 0
         '
         'VScrollBar1
         '
         Me.VScrollBar1.Dock = System.Windows.Forms.DockStyle.Right
         Me.VScrollBar1.LargeChange = 5
-        Me.VScrollBar1.Location = New System.Drawing.Point(863, 0)
+        Me.VScrollBar1.Location = New System.Drawing.Point(1020, 0)
         Me.VScrollBar1.Name = "VScrollBar1"
         Me.VScrollBar1.Size = New System.Drawing.Size(17, 377)
         Me.VScrollBar1.TabIndex = 2
@@ -86,6 +89,8 @@ Partial Class Form5
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel2.Controls.Add(Me.Splitter8)
+        Me.Panel2.Controls.Add(Me.Panel18)
         Me.Panel2.Controls.Add(Me.Splitter7)
         Me.Panel2.Controls.Add(Me.Panel17)
         Me.Panel2.Controls.Add(Me.Splitter6)
@@ -231,6 +236,7 @@ Partial Class Form5
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.Button8)
         Me.Panel3.Controls.Add(Me.Button7)
         Me.Panel3.Controls.Add(Me.Button6)
         Me.Panel3.Controls.Add(Me.Button5)
@@ -345,7 +351,7 @@ Partial Class Form5
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(904, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1061, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -388,11 +394,42 @@ Partial Class Form5
         Me.ColumnsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.ColumnsToolStripMenuItem.Text = "Columns"
         '
+        'Panel18
+        '
+        Me.Panel18.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel18.Location = New System.Drawing.Point(811, 0)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(125, 600)
+        Me.Panel18.TabIndex = 14
+        '
+        'Splitter8
+        '
+        Me.Splitter8.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Splitter8.Location = New System.Drawing.Point(936, 0)
+        Me.Splitter8.Name = "Splitter8"
+        Me.Splitter8.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter8.TabIndex = 15
+        Me.Splitter8.TabStop = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.Transparent
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(811, 4)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(113, 23)
+        Me.Button8.TabIndex = 13
+        Me.Button8.Text = "Ordered By"
+        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button8.UseVisualStyleBackColor = False
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(904, 461)
+        Me.ClientSize = New System.Drawing.Size(1061, 461)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -442,5 +479,7 @@ Partial Class Form5
     Friend WithEvents Splitter7 As Splitter
     Friend WithEvents Panel17 As Panel
     Friend WithEvents Button7 As Button
-
+    Friend WithEvents Splitter8 As Splitter
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents Button8 As Button
 End Class

@@ -20,7 +20,7 @@ Public Class Form5
         Dim i As Integer
         For i = 0 To cnt - 1
             Dim k As Integer
-            For k = 0 To 6
+            For k = 0 To 7
                 Dim btn As New Button
                 btn.Location = New Point(4, 3 + 28 * i)
                 btn.Anchor = AnchorStyles.Left Or AnchorStyles.Right Or AnchorStyles.Top
@@ -58,9 +58,13 @@ Public Class Form5
                         btn.Text = data_arr(i).ordered_date
                         Me.Panel16.Controls.Add(btn)
                     Case 6
-                        btn.Size = New Size(Me.Panel16.Width - 8, 25)
+                        btn.Size = New Size(Me.Panel17.Width - 8, 25)
                         btn.Text = data_arr(i).threshold_date
                         Me.Panel17.Controls.Add(btn)
+                    Case 7
+                        btn.Size = New Size(Me.Panel18.Width - 8, 25)
+                        btn.Text = data_arr(i).ordered_by
+                        Me.Panel18.Controls.Add(btn)
                 End Select
             Next
         Next
@@ -71,6 +75,7 @@ Public Class Form5
         Me.Panel15.Size = New Size(Me.Panel15.Width, cnt * 31)
         Me.Panel16.Size = New Size(Me.Panel16.Width, cnt * 31)
         Me.Panel17.Size = New Size(Me.Panel17.Width, cnt * 31)
+        Me.Panel18.Size = New Size(Me.Panel18.Width, cnt * 31)
         Me.Panel2.Size = New Size(Me.Panel2.Width, cnt * 31)
         Call add_handlers()
     End Sub
@@ -116,6 +121,7 @@ Public Class Form5
         Me.Button5.Size = New Size(Me.Panel15.Width, Me.Button5.Height)
         Me.Button6.Size = New Size(Me.Panel16.Width, Me.Button6.Height)
         Me.Button7.Size = New Size(Me.Panel17.Width, Me.Button7.Height)
+        Me.Button8.Size = New Size(Me.Panel18.Width, Me.Button8.Height)
 
         Me.Button1.Location = New Point(Me.Panel11.Location.X, Me.Button1.Location.Y)
         Me.Button2.Location = New Point(Me.Panel12.Location.X, Me.Button2.Location.Y)
@@ -124,6 +130,7 @@ Public Class Form5
         Me.Button5.Location = New Point(Me.Panel15.Location.X, Me.Button5.Location.Y)
         Me.Button6.Location = New Point(Me.Panel16.Location.X, Me.Button6.Location.Y)
         Me.Button7.Location = New Point(Me.Panel17.Location.X, Me.Button7.Location.Y)
+        Me.Button8.Location = New Point(Me.Panel18.Location.X, Me.Button8.Location.Y)
     End Sub
     Private Sub panel_Location_changed()
         Me.Button1.Size = New Size(Me.Panel11.Width, Me.Button1.Height)
@@ -133,6 +140,7 @@ Public Class Form5
         Me.Button5.Size = New Size(Me.Panel15.Width, Me.Button5.Height)
         Me.Button6.Size = New Size(Me.Panel16.Width, Me.Button6.Height)
         Me.Button7.Size = New Size(Me.Panel17.Width, Me.Button7.Height)
+        Me.Button8.Size = New Size(Me.Panel18.Width, Me.Button8.Height)
 
         Me.Button1.Location = New Point(Me.Panel11.Location.X, Me.Button1.Location.Y)
         Me.Button2.Location = New Point(Me.Panel12.Location.X, Me.Button2.Location.Y)
@@ -141,6 +149,7 @@ Public Class Form5
         Me.Button5.Location = New Point(Me.Panel15.Location.X, Me.Button5.Location.Y)
         Me.Button6.Location = New Point(Me.Panel16.Location.X, Me.Button6.Location.Y)
         Me.Button7.Location = New Point(Me.Panel17.Location.X, Me.Button7.Location.Y)
+        Me.Button8.Location = New Point(Me.Panel18.Location.X, Me.Button8.Location.Y)
     End Sub
     Private Sub VScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles VScrollBar1.Scroll
         Me.Panel2.Location = New Point(Me.Panel2.Location.X, panel2_y - VScrollBar1.Value * 28)

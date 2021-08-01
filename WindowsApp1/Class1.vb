@@ -77,7 +77,7 @@ Public Class get_data2
 
             Array.Resize(data_1, count)
 
-            str = "select Part,Revision,description,Req_Qty,Out_Qty,Req_date,Req_before from Required_Parts_Table;"
+            str = "select Part,Revision,description,Req_Qty,Out_Qty,Req_date,Req_before,requested_by from Required_Parts_Table;"
             myCmd.CommandText = str
             myReader = myCmd.ExecuteReader()
             Do While myReader.Read()
@@ -89,6 +89,7 @@ Public Class get_data2
                 data2.out_qty = myReader.GetString(4).Trim()
                 data2.req_date = myReader.GetDateTime(5).ToShortDateString.Trim
                 data2.req_before = myReader.GetDateTime(6).ToShortDateString.Trim
+                data2.req_by = myReader.GetString(7).Trim()
                 data_1(cnt) = data2
                 cnt += 1
             Loop
@@ -109,6 +110,7 @@ Public Structure data2
     Public req_date As String
     Public req_before As String
     Public description As String
+    Public req_by As String
 End Structure
 
 Public Class get_data3
@@ -135,7 +137,7 @@ Public Class get_data3
 
             Array.Resize(data_1, count)
 
-            str = "select Part,Revision,description,Ordered_qty,In_qty,Ordered_Date,Threshold_Date from Ordered_Parts_Table;"
+            str = "select Part,Revision,description,Ordered_qty,In_qty,Ordered_Date,Threshold_Date,Ordered_by from Ordered_Parts_Table;"
             myCmd.CommandText = str
             myReader = myCmd.ExecuteReader()
             Do While myReader.Read()
@@ -147,6 +149,7 @@ Public Class get_data3
                 data2.in_qty = myReader.GetString(4).Trim()
                 data2.ordered_date = myReader.GetDateTime(5).ToShortDateString.Trim
                 data2.threshold_date = myReader.GetDateTime(6).ToShortDateString.Trim
+                data2.ordered_by = myReader.GetString(7).Trim()
                 data_1(cnt) = data2
                 cnt += 1
             Loop
@@ -167,6 +170,7 @@ Public Structure data3
     Public ordered_date As String
     Public threshold_date As String
     Public description As String
+    Public ordered_by As String
 End Structure
 
 Public Class get_data4
@@ -296,7 +300,7 @@ Public Class request_part
             Loop
             myReader.Close()
 
-            str = "insert into Required_Parts_Table (Part,Revision,Req_Qty,Out_Qty,Req_date,Req_before,description) values ('" + req_part_data1.Part + "','" + req_part_data1.Revision + "','" + req_part_data1.req_qty + "','0','" + req_part_data1.req_date + "','" + req_part_data1.req_before + "','" + desc + "') ;"
+            str = "insert into Required_Parts_Table (Part,Revision,Req_Qty,Out_Qty,Req_date,Req_before,description, requested_by) values ('" + req_part_data1.Part + "','" + req_part_data1.Revision + "','" + req_part_data1.req_qty + "','0','" + req_part_data1.req_date + "','" + req_part_data1.req_before + "','" + desc + "','" + Module1.username + "') ;"
             myCmd.CommandText = str
             myReader = myCmd.ExecuteReader()
             myReader.Close()
@@ -334,7 +338,7 @@ Public Class ordered_part
             Loop
             myReader.Close()
 
-            str = "insert into Ordered_Parts_Table (Part,Revision,Ordered_qty,In_qty,Ordered_Date,Threshold_Date,description) values ('" + ordered_part_data1.Part + "','" + ordered_part_data1.Revision + "','" + ordered_part_data1.ordered_qty + "','0','" + ordered_part_data1.ordered_date + "','" + ordered_part_data1.Threshold_date + "','" + desc + "') ;"
+            str = "insert into Ordered_Parts_Table (Part,Revision,Ordered_qty,In_qty,Ordered_Date,Threshold_Date,description,Ordered_by) values ('" + ordered_part_data1.Part + "','" + ordered_part_data1.Revision + "','" + ordered_part_data1.ordered_qty + "','0','" + ordered_part_data1.ordered_date + "','" + ordered_part_data1.Threshold_date + "','" + desc + "','" + Module1.username + "') ;"
             myCmd.CommandText = str
             myReader = myCmd.ExecuteReader()
             myReader.Close()

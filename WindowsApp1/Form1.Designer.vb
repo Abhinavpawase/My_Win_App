@@ -23,155 +23,109 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CreatePartNumber = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ColumnsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.MenuStrip1.SuspendLayout()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'Button6
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(260, 24)
-        Me.MenuStrip1.TabIndex = 7
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(57, 124)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(83, 29)
+        Me.Button6.TabIndex = 22
+        Me.Button6.Text = "Sign In"
+        Me.Button6.UseVisualStyleBackColor = True
         '
-        'FileToolStripMenuItem
+        'TextBox1
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(127, 21)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(172, 23)
+        Me.TextBox1.TabIndex = 23
+        Me.TextBox1.Text = "Abhinav"
         '
-        'CloseToolStripMenuItem
+        'Label1
         '
-        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.CloseToolStripMenuItem.Text = "Close"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(30, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(79, 17)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "User Name"
         '
-        'ToolsToolStripMenuItem
+        'Label2
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatePartNumber})
-        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.ToolsToolStripMenuItem.Text = "Edit"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(30, 62)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(69, 17)
+        Me.Label2.TabIndex = 26
+        Me.Label2.Text = "Password"
         '
-        'CreatePartNumber
+        'TextBox2
         '
-        Me.CreatePartNumber.Name = "CreatePartNumber"
-        Me.CreatePartNumber.Size = New System.Drawing.Size(180, 22)
-        Me.CreatePartNumber.Text = "Create Part Number"
-        '
-        'SettingsToolStripMenuItem
-        '
-        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColumnsToolStripMenuItem})
-        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.SettingsToolStripMenuItem.Text = "Settings"
-        '
-        'ColumnsToolStripMenuItem
-        '
-        Me.ColumnsToolStripMenuItem.Name = "ColumnsToolStripMenuItem"
-        Me.ColumnsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ColumnsToolStripMenuItem.Text = "Columns"
-        '
-        'Button2
-        '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(67, 63)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(117, 28)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Store"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(67, 97)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(117, 28)
-        Me.Button3.TabIndex = 18
-        Me.Button3.Text = "Required Parts"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(127, 59)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(172, 23)
+        Me.TextBox2.TabIndex = 25
+        Me.TextBox2.Text = "Pawase@123"
         '
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(67, 131)
+        Me.Button1.Location = New System.Drawing.Point(167, 124)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 28)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Ordered Parts"
+        Me.Button1.Size = New System.Drawing.Size(83, 29)
+        Me.Button1.TabIndex = 27
+        Me.Button1.Text = "Sign Up"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button4
+        'LinkLabel1
         '
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(67, 165)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(117, 28)
-        Me.Button4.TabIndex = 20
-        Me.Button4.Text = "In Parts"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(67, 199)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(117, 28)
-        Me.Button5.TabIndex = 21
-        Me.Button5.Text = "Out Parts"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(213, 94)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(86, 13)
+        Me.LinkLabel1.TabIndex = 28
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Forgot Password"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(260, 275)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
+        Me.ClientSize = New System.Drawing.Size(347, 175)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button6)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = " "
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CloseToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CreatePartNumber As ToolStripMenuItem
-    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ColumnsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

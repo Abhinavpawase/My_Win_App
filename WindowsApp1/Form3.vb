@@ -5,6 +5,7 @@ Public Class Form3
     Dim uctl As UserControl1
     Dim ctl8 As Control
     Dim ctl12 As Control
+    Dim frm4 As Form4
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call load_form()
@@ -20,7 +21,7 @@ Public Class Form3
         Dim i As Integer
         For i = 0 To cnt - 1
             Dim k As Integer
-            For k = 0 To 6
+            For k = 0 To 7
                 Dim btn As New Button
                 btn.Location = New Point(4, 3 + 28 * i)
                 btn.Anchor = AnchorStyles.Left Or AnchorStyles.Right Or AnchorStyles.Top
@@ -48,6 +49,7 @@ Public Class Form3
                     Case 3
                         btn.Size = New Size(Me.Panel14.Width - 8, 25)
                         btn.Text = data_arr(i).req_qty
+                        btn.Name = "qty" + data_arr(i).Part + "!" + data_arr(i).Revision
                         Me.Panel14.Controls.Add(btn)
                     Case 4
                         btn.Size = New Size(Me.Panel15.Width - 8, 25)
@@ -61,9 +63,14 @@ Public Class Form3
                         btn.Size = New Size(Me.Panel16.Width - 8, 25)
                         btn.Text = data_arr(i).req_before
                         Me.Panel17.Controls.Add(btn)
+                    Case 7
+                        btn.Size = New Size(Me.Panel18.Width - 8, 25)
+                        btn.Text = data_arr(i).req_by
+                        Me.Panel18.Controls.Add(btn)
                 End Select
             Next
         Next
+
         Me.Panel11.Size = New Size(Me.Panel11.Width, cnt * 31)
         Me.Panel12.Size = New Size(Me.Panel12.Width, cnt * 31)
         Me.Panel13.Size = New Size(Me.Panel13.Width, cnt * 31)
@@ -71,6 +78,7 @@ Public Class Form3
         Me.Panel15.Size = New Size(Me.Panel15.Width, cnt * 31)
         Me.Panel16.Size = New Size(Me.Panel16.Width, cnt * 31)
         Me.Panel17.Size = New Size(Me.Panel17.Width, cnt * 31)
+        Me.Panel18.Size = New Size(Me.Panel18.Width, cnt * 31)
         Me.Panel2.Size = New Size(Me.Panel2.Width, cnt * 31)
         Call add_handlers()
     End Sub
@@ -102,6 +110,7 @@ Public Class Form3
         Me.Button5.Size = New Size(Me.Panel15.Width, Me.Button5.Height)
         Me.Button6.Size = New Size(Me.Panel16.Width, Me.Button6.Height)
         Me.Button7.Size = New Size(Me.Panel17.Width, Me.Button7.Height)
+        Me.Button8.Size = New Size(Me.Panel18.Width, Me.Button8.Height)
 
         Me.Button1.Location = New Point(Me.Panel11.Location.X, Me.Button1.Location.Y)
         Me.Button2.Location = New Point(Me.Panel12.Location.X, Me.Button2.Location.Y)
@@ -110,6 +119,7 @@ Public Class Form3
         Me.Button5.Location = New Point(Me.Panel15.Location.X, Me.Button5.Location.Y)
         Me.Button6.Location = New Point(Me.Panel16.Location.X, Me.Button6.Location.Y)
         Me.Button7.Location = New Point(Me.Panel17.Location.X, Me.Button7.Location.Y)
+        Me.Button8.Location = New Point(Me.Panel18.Location.X, Me.Button8.Location.Y)
     End Sub
     Private Sub panel_Location_changed()
         Me.Button1.Size = New Size(Me.Panel11.Width, Me.Button1.Height)
@@ -119,6 +129,7 @@ Public Class Form3
         Me.Button5.Size = New Size(Me.Panel15.Width, Me.Button5.Height)
         Me.Button6.Size = New Size(Me.Panel16.Width, Me.Button6.Height)
         Me.Button7.Size = New Size(Me.Panel17.Width, Me.Button7.Height)
+        Me.Button8.Size = New Size(Me.Panel18.Width, Me.Button8.Height)
 
         Me.Button1.Location = New Point(Me.Panel11.Location.X, Me.Button1.Location.Y)
         Me.Button2.Location = New Point(Me.Panel12.Location.X, Me.Button2.Location.Y)
@@ -127,6 +138,7 @@ Public Class Form3
         Me.Button5.Location = New Point(Me.Panel15.Location.X, Me.Button5.Location.Y)
         Me.Button6.Location = New Point(Me.Panel16.Location.X, Me.Button6.Location.Y)
         Me.Button7.Location = New Point(Me.Panel17.Location.X, Me.Button7.Location.Y)
+        Me.Button8.Location = New Point(Me.Panel18.Location.X, Me.Button8.Location.Y)
     End Sub
     Private Sub VScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles VScrollBar1.Scroll
         Me.Panel2.Location = New Point(Me.Panel2.Location.X, panel2_y - VScrollBar1.Value * 28)
@@ -159,16 +171,29 @@ Public Class Form3
     Private Sub out_part()
         Call remove_uctl()
         Dim str As String = ctl8.Name
-        Dim frm As New Form4
-        frm.Label1.Text = "Out Date"
-        frm.Label3.Visible = False
-        frm.TextBox3.Visible = False
-        frm.DateTimePicker2.Visible = False
-        frm.Button2.Location = New Point(57, 255 - 50)
-        frm.Button1.Location = New Point(188, 255 - 50)
-        frm.Size = New Size(frm.Width, frm.Height - 50)
-        frm.partno = str
-        frm.Show()
+        frm4 = New Form4
+        frm4.Label1.Text = "Out Date"
+        frm4.Label3.Visible = False
+        frm4.TextBox3.Visible = False
+        frm4.DateTimePicker2.Visible = False
+        frm4.Button2.Location = New Point(57, 255 - 50)
+        frm4.Button1.Location = New Point(188, 255 - 50)
+        frm4.Size = New Size(frm4.Width, frm4.Height - 50)
+        frm4.partno = str
+        frm4.Show()
+        AddHandler frm4.Button2.Click, AddressOf out_part_qty
+
+    End Sub
+    Private Sub out_part_qty()
+        Dim qty As String
+        qty = frm4.TextBox2.Text
+
+
+
+
+
+
+        frm4.Dispose()
     End Sub
     Private Sub remove_uctl()
         uctl.BackColor = Color.Transparent
