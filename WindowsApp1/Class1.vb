@@ -365,24 +365,3 @@ Public Structure Out_part_data
     Public out_qty As String
     Public out_date As String
 End Structure
-
-Public Structure Misc_All_data
-    Public Part As String
-    Public Revision As String
-    Public Quantity As String
-    Public description As String
-    Public req_qty As String
-    Public out_qty As String
-    Public req_date As String
-    Public req_before As String
-    Public req_by As String
-    Public ordered_qty As String
-    Public in_qty As String
-    Public ordered_date As String
-    Public threshold_date As String
-    Public ordered_by As String
-    Public in_On As String
-    Public Out_On As String
-    Public in_date As String
-    Public out_date As String
-End Structure
