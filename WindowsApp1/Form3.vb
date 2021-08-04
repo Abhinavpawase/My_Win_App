@@ -12,16 +12,18 @@ Public Class Form3
     End Sub
     Private Sub load_form()
         panel2_y = Me.Panel2.Location.Y
-        Dim data_arr() As data2
+        Dim data_arr As New ArrayList
         Dim cnt As Integer
         Dim cls As New get_data2
         cls.get_data()
-        data_arr = cls.data_1
+        data_arr = cls._data2
         cnt = cls.cnt
         Dim i As Integer
         For i = 0 To cnt - 1
             Dim k As Integer
             For k = 0 To 7
+                Dim data3 As New data2
+                data3 = data_arr.Item(i)
                 Dim btn As New Button
                 btn.Location = New Point(4, 3 + 28 * i)
                 btn.Anchor = AnchorStyles.Left Or AnchorStyles.Right Or AnchorStyles.Top
@@ -34,38 +36,38 @@ Public Class Form3
                 Select Case k
                     Case 0
                         btn.Size = New Size(Me.Panel11.Width - 8, 25)
-                        btn.Text = data_arr(i).Part
+                        btn.Text = data3.Part
                         Me.Panel11.Controls.Add(btn)
-                        btn.Name = data_arr(i).Part + "!" + data_arr(i).Revision
+                        btn.Name = data3.Part + "!" + data3.Revision
                         AddHandler btn.MouseDown, AddressOf form2_Click
                     Case 1
                         btn.Size = New Size(Me.Panel12.Width - 8, 25)
-                        btn.Text = data_arr(i).Revision
+                        btn.Text = data3.Revision
                         Me.Panel12.Controls.Add(btn)
                     Case 2
                         btn.Size = New Size(Me.Panel13.Width - 8, 25)
-                        btn.Text = data_arr(i).description
+                        btn.Text = data3.description
                         Me.Panel13.Controls.Add(btn)
                     Case 3
                         btn.Size = New Size(Me.Panel14.Width - 8, 25)
-                        btn.Text = data_arr(i).req_qty
+                        btn.Text = data3.req_qty
                         btn.Name = "qty" + data_arr(i).Part + "!" + data_arr(i).Revision
                         Me.Panel14.Controls.Add(btn)
                     Case 4
                         btn.Size = New Size(Me.Panel15.Width - 8, 25)
-                        btn.Text = data_arr(i).out_qty
+                        btn.Text = data3.out_qty
                         Me.Panel15.Controls.Add(btn)
                     Case 5
                         btn.Size = New Size(Me.Panel16.Width - 8, 25)
-                        btn.Text = data_arr(i).req_date
+                        btn.Text = data3.req_date
                         Me.Panel16.Controls.Add(btn)
                     Case 6
                         btn.Size = New Size(Me.Panel16.Width - 8, 25)
-                        btn.Text = data_arr(i).req_before
+                        btn.Text = data3.req_before
                         Me.Panel17.Controls.Add(btn)
                     Case 7
                         btn.Size = New Size(Me.Panel18.Width - 8, 25)
-                        btn.Text = data_arr(i).req_by
+                        btn.Text = data3.req_by
                         Me.Panel18.Controls.Add(btn)
                 End Select
             Next

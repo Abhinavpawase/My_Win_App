@@ -8,16 +8,18 @@ Public Class Form7
     End Sub
     Private Sub load_form()
         panel2_y = Me.Panel2.Location.Y
-        Dim data_arr() As data5
+        Dim data_arr As New ArrayList
         Dim cnt As Integer
         Dim cls As New get_data5
         cls.get_data()
-        data_arr = cls.data_1
+        data_arr = cls._data5
         cnt = cls.cnt
         Dim i As Integer
         For i = 0 To cnt - 1
             Dim k As Integer
             For k = 0 To 4
+                Dim data5 As New data5
+                data5 = data_arr.Item(i)
                 Dim btn As New Button
                 btn.Location = New Point(4, 3 + 28 * i)
                 btn.Anchor = AnchorStyles.Left Or AnchorStyles.Right Or AnchorStyles.Top
@@ -30,25 +32,25 @@ Public Class Form7
                 Select Case k
                     Case 0
                         btn.Size = New Size(Me.Panel11.Width - 8, 25)
-                        btn.Text = data_arr(i).Part
+                        btn.Text = data5.Part
                         Me.Panel11.Controls.Add(btn)
-                        btn.Name = data_arr(i).Part + "!" + data_arr(i).Revision
+                        btn.Name = data5.Part + "!" + data5.Revision
                         'AddHandler btn.MouseDown, AddressOf form2_Click
                     Case 1
                         btn.Size = New Size(Me.Panel12.Width - 8, 25)
-                        btn.Text = data_arr(i).Revision
+                        btn.Text = data5.Revision
                         Me.Panel12.Controls.Add(btn)
                     Case 2
                         btn.Size = New Size(Me.Panel13.Width - 8, 25)
-                        btn.Text = data_arr(i).description
+                        btn.Text = data5.description
                         Me.Panel13.Controls.Add(btn)
                     Case 3
                         btn.Size = New Size(Me.Panel14.Width - 8, 25)
-                        btn.Text = data_arr(i).Out_qty
+                        btn.Text = data5.Out_qty
                         Me.Panel14.Controls.Add(btn)
                     Case 4
                         btn.Size = New Size(Me.Panel15.Width - 8, 25)
-                        btn.Text = data_arr(i).Out_On
+                        btn.Text = data5.Out_On
                         Me.Panel15.Controls.Add(btn)
                 End Select
             Next
