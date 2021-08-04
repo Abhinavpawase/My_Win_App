@@ -1,6 +1,7 @@
 ﻿
 Imports System.Data.SqlClient
 
+'inventory
 Public Class get_data
     Public cnt As Integer
     Public myConn As SqlConnection
@@ -40,6 +41,7 @@ Public Structure data1
     Public description As String
 End Structure
 
+'Required Parts
 Public Class get_data2
     Public cnt As Integer
     Public myConn As SqlConnection
@@ -87,6 +89,7 @@ Public Structure data2
     Public req_by As String
 End Structure
 
+'Ordered Parts
 Public Class get_data3
     Public cnt As Integer
     Public myConn As SqlConnection
@@ -134,6 +137,7 @@ Public Structure data3
     Public ordered_by As String
 End Structure
 
+'In Parts
 Public Class get_data4
     Public cnt As Integer
     Public myConn As SqlConnection
@@ -175,6 +179,7 @@ Public Structure data4
     Public description As String
 End Structure
 
+'Out Parts
 Public Class get_data5
     Public cnt As Integer
     Public myConn As SqlConnection
@@ -216,6 +221,7 @@ Public Structure data5
     Public description As String
 End Structure
 
+'Create Part Request.
 Public Class request_part
     Public myConn As SqlConnection
     Public myCmd As SqlCommand
@@ -254,6 +260,7 @@ Public Structure req_part_data
     Public req_before As String
 End Structure
 
+'Create Order request
 Public Class ordered_part
     Public myConn As SqlConnection
     Public myCmd As SqlCommand
@@ -292,6 +299,7 @@ Public Structure ordered_part_data
     Public Threshold_date As String
 End Structure
 
+'Update In Part
 Public Class In_part
     Public myConn As SqlConnection
     Public myCmd As SqlCommand
@@ -329,6 +337,7 @@ Public Structure In_part_data
     Public in_date As String
 End Structure
 
+'Update Out Part
 Public Class Out_part
     Public myConn As SqlConnection
     Public myCmd As SqlCommand
@@ -363,26 +372,5 @@ Public Structure Out_part_data
     Public Part As String
     Public Revision As String
     Public out_qty As String
-    Public out_date As String
-End Structure
-
-Public Structure Misc_All_data
-    Public Part As String
-    Public Revision As String
-    Public Quantity As String
-    Public description As String
-    Public req_qty As String
-    Public out_qty As String
-    Public req_date As String
-    Public req_before As String
-    Public req_by As String
-    Public ordered_qty As String
-    Public in_qty As String
-    Public ordered_date As String
-    Public threshold_date As String
-    Public ordered_by As String
-    Public in_On As String
-    Public Out_On As String
-    Public in_date As String
     Public out_date As String
 End Structure
