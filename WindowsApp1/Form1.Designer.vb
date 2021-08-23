@@ -34,6 +34,8 @@ Partial Class Form1
         '
         'Button6
         '
+        Me.Button6.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Location = New System.Drawing.Point(57, 124)
@@ -41,7 +43,7 @@ Partial Class Form1
         Me.Button6.Size = New System.Drawing.Size(83, 29)
         Me.Button6.TabIndex = 22
         Me.Button6.Text = "Sign In"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'TextBox1
         '
@@ -83,14 +85,16 @@ Partial Class Form1
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(167, 124)
+        Me.Button1.Location = New System.Drawing.Point(174, 124)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(83, 29)
         Me.Button1.TabIndex = 27
         Me.Button1.Text = "Sign Up"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'LinkLabel1
         '

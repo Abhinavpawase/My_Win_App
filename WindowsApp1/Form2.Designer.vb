@@ -22,6 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -45,6 +46,7 @@ Partial Class Form2
         Me.UpdateStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColumnsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -61,14 +63,14 @@ Partial Class Form2
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(12, 72)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(535, 377)
+        Me.Panel1.Size = New System.Drawing.Size(560, 377)
         Me.Panel1.TabIndex = 0
         '
         'VScrollBar1
         '
         Me.VScrollBar1.Dock = System.Windows.Forms.DockStyle.Right
         Me.VScrollBar1.LargeChange = 5
-        Me.VScrollBar1.Location = New System.Drawing.Point(518, 0)
+        Me.VScrollBar1.Location = New System.Drawing.Point(543, 0)
         Me.VScrollBar1.Name = "VScrollBar1"
         Me.VScrollBar1.Size = New System.Drawing.Size(17, 377)
         Me.VScrollBar1.TabIndex = 2
@@ -229,10 +231,10 @@ Partial Class Form2
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.HomeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(559, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(584, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -275,17 +277,24 @@ Partial Class Form2
         Me.ColumnsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.ColumnsToolStripMenuItem.Text = "Columns"
         '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem.Text = "Home"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(559, 461)
+        Me.ClientSize = New System.Drawing.Size(584, 461)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form2"
-        Me.Text = " "
+        Me.Text = " Store"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
@@ -319,5 +328,5 @@ Partial Class Form2
     Friend WithEvents UpdateStatusToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ColumnsToolStripMenuItem As ToolStripMenuItem
-
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
 End Class

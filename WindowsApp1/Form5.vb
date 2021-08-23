@@ -5,8 +5,10 @@ Public Class Form5
     Dim uctl As UserControl1
     Dim ctl8 As Control
     Dim ctl12 As Control
+    Public Property frm9 As Form9
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Size = New Size(600, 500)
         Call load_form()
     End Sub
     Private Sub load_form()
@@ -180,6 +182,13 @@ Public Class Form5
         uctl.Hide()
         Me.Panel1.Controls.Remove(uctl)
     End Sub
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
 
-
+    End Sub
+    Private Sub HomeToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem1.Click
+        If Not frm9 Is Nothing Then
+            frm9.TopMost = True
+            frm9.TopMost = False
+        End If
+    End Sub
 End Class

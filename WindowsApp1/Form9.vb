@@ -2,6 +2,11 @@
 
 Public Class Form9
 
+    Dim frm2 As Form2 = Nothing
+    Dim frm3 As Form3 = Nothing
+    Dim frm5 As Form5 = Nothing
+    Dim frm6 As Form6 = Nothing
+    Dim frm7 As Form7 = Nothing
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -10,30 +15,100 @@ Public Class Form9
 
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim frm As New Form2
-        frm.Show()
+        If frm2 Is Nothing Then
+            frm2 = New Form2
+            frm2.frm9 = Me
+            frm2.Show()
+            AddHandler frm2.FormClosed, AddressOf frm2_close
+        Else
+            frm2.TopMost = True
+            frm2.TopMost = False
+        End If
+    End Sub
+    Private Sub frm2_close()
+        frm2 = Nothing
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim frm As New Form3
-        frm.Show()
+        If frm3 Is Nothing Then
+            frm3 = New Form3
+            frm3.frm9 = Me
+            frm3.Show()
+
+            AddHandler frm3.FormClosed, AddressOf frm3_close
+        Else
+            frm3.TopMost = True
+            frm3.TopMost = False
+        End If
+    End Sub
+    Private Sub frm3_close()
+        frm3 = Nothing
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim frm As New Form5
-        frm.Show()
+        If frm5 Is Nothing Then
+            frm5 = New Form5
+            frm5.frm9 = Me
+            frm5.Show()
+
+            AddHandler frm5.FormClosed, AddressOf frm5_close
+        Else
+            frm5.TopMost = True
+            frm5.TopMost = False
+        End If
+    End Sub
+    Private Sub frm5_close()
+        frm5 = Nothing
     End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim frm As New Form6
-        frm.Show()
+        If frm6 Is Nothing Then
+            frm6 = New Form6
+            frm6.frm9 = Me
+            frm6.Show()
+
+            AddHandler frm6.FormClosed, AddressOf frm6_close
+        Else
+            frm6.TopMost = True
+            frm6.TopMost = False
+        End If
+    End Sub
+    Private Sub frm6_close()
+        frm6 = Nothing
     End Sub
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim frm As New Form7
-        frm.Show()
+        If frm7 Is Nothing Then
+            frm7 = New Form7
+            frm7.frm9 = Me
+            frm7.Show()
+
+            AddHandler frm7.FormClosed, AddressOf frm7_close
+        Else
+            frm7.TopMost = True
+            frm7.TopMost = False
+        End If
+    End Sub
+    Private Sub frm7_close()
+        frm7 = Nothing
     End Sub
     Private Sub CreatePartNumber_Click(sender As Object, e As EventArgs) Handles CreatePartNumber.Click
         Dim frm As New Form8
         frm.Show()
     End Sub
     Private Sub Form9_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Me.Hide()
+        If Not frm2 Is Nothing Then
+            frm2.Hide()
+        End If
+        If Not frm3 Is Nothing Then
+            frm3.Hide()
+        End If
+        If Not frm5 Is Nothing Then
+            frm5.Hide()
+        End If
+        If Not frm6 Is Nothing Then
+            frm6.Hide()
+        End If
+        If Not frm7 Is Nothing Then
+            frm7.Hide()
+        End If
         Close()
     End Sub
 

@@ -2,8 +2,10 @@
 
 Public Class Form7
     Dim panel2_y As Double = 0
+    Public Property frm9 As Form9
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Size = New Size(600, 500)
         Call load_form()
     End Sub
     Private Sub load_form()
@@ -108,5 +110,10 @@ Public Class Form7
     Private Sub VScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles VScrollBar1.Scroll
         Me.Panel2.Location = New Point(Me.Panel2.Location.X, panel2_y - VScrollBar1.Value * 28)
     End Sub
-
+    Private Sub HomeToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem1.Click
+        If Not frm9 Is Nothing Then
+            frm9.TopMost = True
+            frm9.TopMost = False
+        End If
+    End Sub
 End Class

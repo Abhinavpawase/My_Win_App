@@ -26,6 +26,8 @@ Partial Class Form5
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Splitter8 = New System.Windows.Forms.Splitter()
+        Me.Panel18 = New System.Windows.Forms.Panel()
         Me.Splitter7 = New System.Windows.Forms.Splitter()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.Splitter6 = New System.Windows.Forms.Splitter()
@@ -41,6 +43,7 @@ Partial Class Form5
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -50,14 +53,13 @@ Partial Class Form5
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColumnsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel18 = New System.Windows.Forms.Panel()
-        Me.Splitter8 = New System.Windows.Forms.Splitter()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.HomeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -109,6 +111,23 @@ Partial Class Form5
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(3000, 600)
         Me.Panel2.TabIndex = 1
+        '
+        'Splitter8
+        '
+        Me.Splitter8.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Splitter8.Location = New System.Drawing.Point(936, 0)
+        Me.Splitter8.Name = "Splitter8"
+        Me.Splitter8.Size = New System.Drawing.Size(5, 600)
+        Me.Splitter8.TabIndex = 15
+        Me.Splitter8.TabStop = False
+        '
+        'Panel18
+        '
+        Me.Panel18.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel18.Location = New System.Drawing.Point(811, 0)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(125, 600)
+        Me.Panel18.TabIndex = 14
         '
         'Splitter7
         '
@@ -249,6 +268,20 @@ Partial Class Form5
         Me.Panel3.Size = New System.Drawing.Size(1200, 30)
         Me.Panel3.TabIndex = 6
         '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.Transparent
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(811, 4)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(113, 23)
+        Me.Button8.TabIndex = 13
+        Me.Button8.Text = "Ordered By"
+        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button8.UseVisualStyleBackColor = False
+        '
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.Color.Transparent
@@ -348,7 +381,7 @@ Partial Class Form5
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.HomeToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1061, 24)
@@ -357,15 +390,21 @@ Partial Class Form5
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.CloseToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.FileToolStripMenuItem.Text = "Tool"
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'ToolsToolStripMenuItem
@@ -394,36 +433,11 @@ Partial Class Form5
         Me.ColumnsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.ColumnsToolStripMenuItem.Text = "Columns"
         '
-        'Panel18
+        'HomeToolStripMenuItem1
         '
-        Me.Panel18.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel18.Location = New System.Drawing.Point(811, 0)
-        Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(125, 600)
-        Me.Panel18.TabIndex = 14
-        '
-        'Splitter8
-        '
-        Me.Splitter8.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Splitter8.Location = New System.Drawing.Point(936, 0)
-        Me.Splitter8.Name = "Splitter8"
-        Me.Splitter8.Size = New System.Drawing.Size(5, 600)
-        Me.Splitter8.TabIndex = 15
-        Me.Splitter8.TabStop = False
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.Transparent
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(811, 4)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(113, 23)
-        Me.Button8.TabIndex = 13
-        Me.Button8.Text = "Ordered By"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.HomeToolStripMenuItem1.Name = "HomeToolStripMenuItem1"
+        Me.HomeToolStripMenuItem1.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem1.Text = "Home"
         '
         'Form5
         '
@@ -436,7 +450,7 @@ Partial Class Form5
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form5"
-        Me.Text = " "
+        Me.Text = " Ordered Parts"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
@@ -482,4 +496,6 @@ Partial Class Form5
     Friend WithEvents Splitter8 As Splitter
     Friend WithEvents Panel18 As Panel
     Friend WithEvents Button8 As Button
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem1 As ToolStripMenuItem
 End Class

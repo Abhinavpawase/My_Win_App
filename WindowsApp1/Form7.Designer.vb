@@ -44,11 +44,13 @@ Partial Class Form7
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColumnsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -268,7 +270,7 @@ Partial Class Form7
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.HomeToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(718, 24)
@@ -277,15 +279,21 @@ Partial Class Form7
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.CloseToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.FileToolStripMenuItem.Text = "Tool"
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'ToolsToolStripMenuItem
@@ -314,6 +322,12 @@ Partial Class Form7
         Me.ColumnsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.ColumnsToolStripMenuItem.Text = "Columns"
         '
+        'HomeToolStripMenuItem1
+        '
+        Me.HomeToolStripMenuItem1.Name = "HomeToolStripMenuItem1"
+        Me.HomeToolStripMenuItem1.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem1.Text = "Home"
+        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -325,7 +339,7 @@ Partial Class Form7
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form7"
-        Me.Text = " "
+        Me.Text = " Out Parts"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
@@ -362,5 +376,6 @@ Partial Class Form7
     Friend WithEvents UpdateStatusToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ColumnsToolStripMenuItem As ToolStripMenuItem
-
+    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem1 As ToolStripMenuItem
 End Class
