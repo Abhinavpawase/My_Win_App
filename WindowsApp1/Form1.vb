@@ -7,6 +7,7 @@ Public Class Form1
     Public myConn As SqlConnection
     Public myCmd As SqlCommand
     Public myReader As SqlDataReader
+    Dim frm As Form10
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         If Len(Me.TextBox1.Text) <> 0 Or Len(Me.TextBox2.Text) <> 0 Then
             myConn = New SqlConnection("Data Source = LAPTOP-U89PQ616\SQLEXPRESS ; Initial Catalog = Inventory ; Integrated Security=SSPI ; ")
@@ -37,6 +38,16 @@ Public Class Form1
         Else
             MessageBox.Show("Enter Username")
         End If
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If frm Is Nothing Then
+            frm = New Form10
+            AddHandler frm.FormClosed, AddressOf frm_close
+            frm.Show()
+        End If
+    End Sub
+    Private Sub frm_close()
+        frm = Nothing
     End Sub
 
 End Class

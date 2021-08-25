@@ -57,20 +57,20 @@ Partial Class Form9
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatePartNumber})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.ToolsToolStripMenuItem.Text = "Edit"
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.ToolsToolStripMenuItem.Text = "Create"
         '
         'CreatePartNumber
         '
         Me.CreatePartNumber.Name = "CreatePartNumber"
-        Me.CreatePartNumber.Size = New System.Drawing.Size(179, 22)
+        Me.CreatePartNumber.Size = New System.Drawing.Size(180, 22)
         Me.CreatePartNumber.Text = "Create Part Number"
         '
         'SettingsToolStripMenuItem

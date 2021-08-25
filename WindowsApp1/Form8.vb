@@ -7,6 +7,7 @@ Public Class Form8
     Public myReader As SqlDataReader
 
     Private Sub Form8_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.TextBox4.Text = ""
         Me.ComboBox1.SelectedIndex = 0
     End Sub
     Private Sub ComboBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
@@ -42,23 +43,31 @@ Public Class Form8
             Me.TextBox4.Text = "" & code1 & "" & Next_part
         End If
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Dispose()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        myConn = New SqlConnection("Data Source = LAPTOP-U89PQ616\SQLEXPRESS ; Initial Catalog = Inventory ; Integrated Security=SSPI ; ")
-        myConn.Open()
-        myCmd = myConn.CreateCommand
-        Dim str As String
-        str = "insert into Inventory_Table_1 (Part,Revision,Quantity,description) values ('" + Me.TextBox4.Text + "','A','" + Me.TextBox2.Text + "','" + Me.TextBox1.Text + "') ;"
-        myCmd.CommandText = str
-        myReader = myCmd.ExecuteReader()
-        myReader.Close()
-        myConn.Close()
-        Me.TextBox1.Text = ""
-        Me.TextBox2.Text = ""
-        Me.TextBox4.Text = ""
-        MessageBox.Show("Part Number Registered")
+        If Not (String.IsNullOrEmpty(Me.TextBox1.Text)) And Not (String.IsNullOrEmpty(Me.TextBox2.Text)) And Not (String.IsNullOrEmpty(Me.TextBox4.Text)) Then
+            If IsNumeric(Me.TextBox2.Text) Then
+                myConn = New SqlConnection("Data Source = LAPTOP-U89PQ616\SQLEXPRESS ; Initial Catalog = Inventory ; Integrated Security=SSPI ; ")
+                myConn.Open()
+                myCmd = myConn.CreateCommand
+                Dim str As String
+                str = "insert into Inventory_Table_1 (Part,Revision,Quantity,description) values ('" + Me.TextBox4.Text + "','A','" + Me.TextBox2.Text + "','" + Me.TextBox1.Text + "') ;"
+                myCmd.CommandText = str
+                myReader = myCmd.ExecuteReader()
+                myReader.Close()
+                myConn.Close()
+                Me.TextBox1.Text = ""
+                Me.TextBox2.Text = ""
+                Me.TextBox4.Text = ""
+                MessageBox.Show("Part Number Registered")
+            Else
+                MessageBox.Show("Enter Number in Quantity")
+            End If
+        Else
+            MessageBox.Show("Enter All Details")
+        End If
     End Sub
 
 End Class

@@ -88,11 +88,21 @@ Public Class Form9
     Private Sub frm7_close()
         frm7 = Nothing
     End Sub
+    Dim create_no_frm As Form8
     Private Sub CreatePartNumber_Click(sender As Object, e As EventArgs) Handles CreatePartNumber.Click
-        Dim frm As New Form8
-        frm.Show()
+        If create_no_frm Is Nothing Then
+            create_no_frm = New Form8
+            AddHandler create_no_frm.FormClosed, AddressOf create_no_frm_close
+            create_no_frm.Show()
+        End If
+    End Sub
+    Private Sub create_no_frm_close()
+        create_no_frm = Nothing
     End Sub
     Private Sub Form9_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Call close_app()
+    End Sub
+    Private Sub close_app()
         Me.Hide()
         If Not frm2 Is Nothing Then
             frm2.Hide()
@@ -111,5 +121,7 @@ Public Class Form9
         End If
         Close()
     End Sub
-
+    Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseToolStripMenuItem.Click
+        close_app()
+    End Sub
 End Class
